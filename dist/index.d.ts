@@ -101,7 +101,8 @@ declare class CspBuilder {
     toHeaderValue(): string;
     toHeaderKeyValue(): ["content-security-policy" | "content-security-policy-report-only", string];
     toString(): string;
-    withNonceApplied(nonce: string): this;
+    withScriptNonceApplied(nonce: string): this;
+    withStyleNonceApplied(nonce: string): this;
     csp(): {
         directives: CspDirectives;
         reportOnly?: boolean;
